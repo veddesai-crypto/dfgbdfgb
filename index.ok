@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buddy</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="openObject()">buddy why are you here</button>
+
+  <script>
+    function openObject() {
+      var win = window.open();
+      var url = "https://abnormal-v5.netlify.app/";
+      var obj = win.document.createElement('object');
+      obj.style.width = "100%";
+      obj.style.height = "100%";
+      obj.style.border = "none";
+      obj.data = url;
+      win.document.body.appendChild(obj);
+      win.document.body.style.margin = "0";
+      win.document.body.style.padding = "0";
+    }
+  </script>
+</body>
+</html>
